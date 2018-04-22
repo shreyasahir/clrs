@@ -11,27 +11,16 @@ func main() {
 	fmt.Println("value after sorting", x)
 }
 
-func countingSort(arr []int) {
+func countingSort(arr []int, exp int) {
 
-	highest := findHighest(arr)
+	outputArr := make([]int, len(arr))
 
-	fmt.Println("Highest", highest)
-	aux := make([]int, highest+1)
+	count := make([]int, 10)
 
-	sortedArr := make([]int, len(arr))
 	for i := 0; i < len(arr); i++ {
-		aux[arr[i]]++
+		index := arr[i] / exp
+		count[index%10]++
 	}
-
-	j := 0
-	for i := 0; i < len(aux); i++ {
-		tmp := aux[i]
-		for ; tmp > 0; tmp-- {
-			sortedArr[j] = i
-			j++
-		}
-	}
-	fmt.Println("Sorted Array", sortedArr)
 }
 
 func findHighest(arr []int) int {
