@@ -1,5 +1,6 @@
 package main
 
+// Min,max,delete remaining
 import (
 	"fmt"
 	"log"
