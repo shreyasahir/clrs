@@ -19,6 +19,20 @@ func (l *linklist) add(x interface{}) {
 
 }
 
+func (l *linklist) addFront(x interface{}) {
+	head := l.head
+	n := node{data: x, next: nil}
+	if head == nil {
+		l.head = &n
+	} else {
+		for head.next != nil {
+			head = head.next
+		}
+		head.next = &n
+	}
+
+}
+
 func (l *linklist) printList() {
 
 	n := l.head
@@ -34,4 +48,10 @@ func main() {
 	l1.add(10)
 	l1.add(40)
 	l1.printList()
+	fmt.Println("L2 below")
+	l2 := new(linklist)
+	l2.addFront(1)
+	l2.addFront(10)
+	l2.addFront(40)
+	l2.printList()
 }
