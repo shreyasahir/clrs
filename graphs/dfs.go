@@ -7,10 +7,16 @@ import (
 type node struct {
 	value int
 }
+
 type graph struct {
 	nodes []node
 	edges map[node][]node
 }
+
+var (
+	stack   []node
+	visited = make(map[node]bool)
+)
 
 func (g *graph) addNode(n node) {
 	g.nodes = append(g.nodes, n)
@@ -18,17 +24,6 @@ func (g *graph) addNode(n node) {
 
 func (n *node) string() string {
 	return fmt.Sprintf("%v", n.value)
-}
-
-func (g *graph) addEdge(n1, n2 node) {
-	if g.edges == nil {
-		g.edges = make(map[node][]node)
-	}
-	g.edges[n1] = append(g.edges[n1], n2)
-}
-
-func main() {
-	fillGraph()
 }
 
 func showGraph(g *graph) {
@@ -44,31 +39,57 @@ func showGraph(g *graph) {
 	fmt.Println("Graph is", s)
 }
 
-func (g *graph) bfs() {
-	visited := make(map[node]bool, len(g.nodes))
-	var queue []node
+func (g *graph) addEdge(n1, n2 node) {
+	if g.edges == nil {
+		g.edges = make(map[node][]node)
+	}
+	g.edges[n1] = append(g.edges[n1], n2)
+}
+
+func (g *graph) recursiveDFS() {
+
 	n := g.nodes[0]
-	queue = append(queue, n)
+	visited[n] = true
+	recursiveDFS(g, n)
+
+}
+
+func recursiveDFS(g *graph, n node) {
+	fmt.Println(n)
+	//if len(vi)
+	near := g.edges[n]
+	for i := 0; i < len(near); i++ {
+		j := near[i]
+		if !visited[j] {
+			recursiveDFS(g, j)
+		}
+	}
+
+}
+
+func (g *graph) dfs() {
+	visited := make(map[node]bool, len(g.nodes))
+	var stack []node
+	n := g.nodes[0]
+	stack = append(stack, n)
 
 	for {
-		if len(queue) == 0 {
+		if len(stack) == 0 {
 			break
 		}
-		node := queue[0]
-		queue = queue[1:]
-		visited[node] = true
-		near := g.edges[node]
-
+		n = stack[len(stack)-1]
+		fmt.Println("node printing", n)
+		visited[n] = true
+		stack = stack[:len(stack)-1]
+		near := g.edges[n]
 		for i := 0; i < len(near); i++ {
 			j := near[i]
 			if !visited[j] {
-				queue = append(queue, j)
-				visited[j] = true
+				stack = append(stack, j)
 			}
 		}
-
-		fmt.Printf("%v\n", node)
 	}
+
 }
 
 func fillGraph() {
@@ -97,5 +118,11 @@ func fillGraph() {
 	g.addEdge(n2, n6)
 
 	showGraph(&g)
-	g.bfs()
+	g.dfs()
+	g.recursiveDFS()
+}
+
+func main() {
+
+	fillGraph()
 }
