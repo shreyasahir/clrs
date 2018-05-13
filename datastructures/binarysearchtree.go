@@ -218,7 +218,7 @@ func main() {
 			log.Fatal("Error inserting value '", values[i], "': ", err)
 		}
 	}
-
+	nil
 	fmt.Println("inorder")
 	tree.traverse(func(n *Node) { fmt.Print(n.value, ": ", n.key, " | ") })
 	fmt.Println("\n")
