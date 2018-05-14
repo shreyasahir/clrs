@@ -1,0 +1,9 @@
+dynamic
+matrix
+recursion (tower of hanoi & queen)
+
+
+graph
+string matching
+numeric 
+greedy
