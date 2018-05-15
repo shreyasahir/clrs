@@ -1,9 +1,21 @@
 dynamic
 matrix
 recursion (tower of hanoi & queen)
-
+backtracking 
 
 graph
 string matching
 numeric 
 greedy
+
+
+
+
+Docker
+
+Docker engine
+images and containers
+container management
+docker file 
+registries
+networking
