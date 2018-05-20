@@ -1,7 +1,0 @@
-fastest way to find bits set in n 
-n & n-1 till n > 0 and count iterations happened
-
-even numbers n & 1 = 0
-odd numbers n & 1 = 1
-
-no of even numbers by rotation depends on number of zero's just count the zero's
