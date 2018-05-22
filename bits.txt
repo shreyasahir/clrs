@@ -11,3 +11,7 @@ individual bit addition a^b
 carry a&b
 
 for integers
+
+if xor all elements in array you get the unique array
+
+for anagram ++ and -- elements and find result
