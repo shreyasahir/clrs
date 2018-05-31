@@ -12,6 +12,6 @@ carry a&b
 
 for integers
 
-if xor all elements in array you get the unique array
+if xor all elements in array you get the unique elem
 
 for anagram ++ and -- elements and find result
