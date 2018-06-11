@@ -1,0 +1,16 @@
+graph 
+remove edge
+BFS
+DFS
+topological sort
+prim's algo
+min weight spanning tree
+ Coloring algorithms
+ Topological sorting and Bipartite Matching.
+
+ Very less likely
+ djk short path
+
+
+Need to do this
+https://www.programcreek.com/2012/11/top-10-algorithms-for-coding-interview/
