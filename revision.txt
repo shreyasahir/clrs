@@ -1,0 +1,22 @@
+Bubble Sort worst case O(n2)
+insertion Sort worst case O(n2)
+selection Sort worst case O(n2)
+merge sort worst case O(nlogn)
+In the worst case, merge sort does about 39% fewer comparisons than 
+quicksort does in the average case. In terms of moves, merge sort's worst
+case complexity is O(n log n)—the same complexity as quicksort's best case,
+and merge sort's best case takes about half as many iterations as the worst case.
+
+
+quick sort worst case o(n2)
+aver and best is o(nlogn)
+
+counting sort  worst case is o(k+n)
+
+
+Radix sort complexity is O(wn) for n keys which are integers of word size w. 
+Sometimes w is presented as a constant, which would make radix sort better 
+(for sufficiently large n) than the best comparison-based sorting algorithms, 
+which all perform O(n log n) comparisons to sort n keys.
+
+heap sort worst case O(n log(n))
