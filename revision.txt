@@ -20,3 +20,17 @@ Sometimes w is presented as a constant, which would make radix sort better
 which all perform O(n log n) comparisons to sort n keys.
 
 heap sort worst case O(n log(n))
+
+
+Design Patterns
+1:- Singleton pattern:- one instance in entire application
+2:- Factory pattern :- where the client passes type and we create the object. object creation logic is hidden.
+eg:-In travel site, we can book train ticket as well bus tickets and flight ticket. In this case user can give his travel type as ‘bus’, ‘train’ or ‘flight’.
+Here we have an abstract class ‘AnyTravel’ with a static member function ‘GetObject’ which depending on user’s travel type, 
+will create & return object of ‘BusTravel’ or ‘ TrainTravel’. ‘BusTravel’ or ‘ TrainTravel’ have common 
+functions like passenger name, Origin, destinationparameters.
+
+3:- observer pattern:- It is heavily used in GUI toolkits and event listener. In java the button(subject) and onClickListener(observer) 
+are modelled with observer pattern.
+Social media, RSS feeds, email subscription in which you have the option to follow or subscribe and you receive latest notification.
+All users of an app on play store gets notified if there is an update.
