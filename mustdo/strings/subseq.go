@@ -18,10 +18,4 @@ func subSeq(s string) {
 func main() {
 	s := "abcd"
 	subSeq(s)
-
 }
-
-// def substring(str):
-//     for i in range(len(str)):
-//         print(str[i:])
-//         substring(str[i:i-1])
