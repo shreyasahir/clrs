@@ -15,3 +15,6 @@ for integers
 if xor all elements in array you get the unique elem
 
 for anagram ++ and -- elements and find result
+
+if we xor n and value and index in arr of size n
+we get missing number
